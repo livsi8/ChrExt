@@ -1,0 +1,35 @@
+{
+  //Required
+  "name" : "Maximarkets_extension",
+  "author" : "Arthur",
+  "version" : "1.0",
+  "manifest_version" : 2,
+
+  //Recommended
+  "description" : "Something will be here",
+  "icons" : {
+    "16" : "sceleton.png",
+    "32" : "sceleton.png",
+    "68" : "sceleton.png",
+    "128" : "sceleton.png"
+  },
+
+  "background" : {
+    "scripts" : ["background.js"],
+    "persistent": false
+  },
+
+  // Type of action: Browser, Page, or none
+  "browser_action" : {
+    "default_title" : "Maximarkets",
+    "default_icon" : "sceleton.png",
+    "default_popup" : "popup.html"
+  },
+
+  // this page need for options if it needed
+  "options_page": "options.html",
+
+  //intent of app. what you will access from the user
+  "permissions" : ["http://*/*", "https://*/*"]
+}
+//https://www.youtube.com/watch?v=uh84Asy2W4s

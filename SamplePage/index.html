@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+    * {
+        background: #b8b8b8;
+    }
+    .form{
+        margin: 5px;
+        /*background: #008080;*/
+        font-size: large;
+        color: black;           
+    }
+    .form1{        
+        width: 200px;
+        height: 200px; 
+    }
+    .button{
+        margin: 10px;
+        font-size: x-large;
+        height: 40px;
+        width: 150px;
+        text-align: center;
+        background-color: #2aabe4;
+        border-radius: 2px;
+    }
+    input {
+        font-size: medium;
+    }
+</style>
+</head>
+<body>
+
+
+
+<script>
+    function aaalert(){
+
+        chrome.tabs.create({"url": "http://google.com"});
+        chrome.tabs.location.href = "http://dev-trading.umarkets.com/";
+    }
+    
+    
+
+</script>
+
+<div class="form1">
+   <div class="form">
+       <span>Login: </span>
+       <input id="login" type="email" placeholder="Впишите E.mail"/>
+    </div>
+    <div class="form">
+        <span>Pass: </span>
+        <input id="Pass" type="password" placeholder="Ваш пароль"/>
+    </div>
+    <div class="form" style="text-align: center">
+        <button name="but" class="button" type="submit" onclick="alert('@@')">Кнопка</button>
+    </div>    
+</div> 
+
+
+</body>
+</html>
