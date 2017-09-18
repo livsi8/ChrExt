@@ -8,37 +8,44 @@
   //Recommended
   "description" : "Something will be here",
   "icons" : {
-    "16" : "sceleton.png",
-    "32" : "sceleton.png",
-    "68" : "sceleton.png",
-    "128" : "sceleton.png"
+    "16" : "img/logo-dlogin-maximarkets.png",
+    "32" : "img/logo-dlogin-maximarkets.png",
+    "68" : "img/logo-dlogin-maximarkets.png",
+    "128" : "img/logo-dlogin-maximarkets.png"
   },
 
-  "background" : {
-    "scripts" : ["/js/main.js", "js/insert.js"],
-    "persistent": false
-  },
+   /*"background" : {
+     "scripts" : ["js/background.js"],
+//     "page": "background.html",
+     "persistent": true
+   },*/
 
-  // Type of action: Browser, Page, or none
-  "browser_action" : {
-    "default_title" : "Maximarkets",
-    "default_icon" : "sceleton.png",
-    "default_popup" : "popup.html"
-  },
+  /* // Type of action: Browser, Page, or none
+   "browser_action" : {
+     "default_title" : "Maximarkets",
+ //    "default_icon" : "img/payments.png",
+     "default_icon" : "img/icons8-64.png",
+     "default_popup" : "insert.html"
+   },*/
 
   // this page need for options if it needed
-  "options_page": "options.html",
+  //  "options_page": "options.html",
 
-  //intent of app. what you will access from the user
-  "permissions" : [
-    "http://*/*",
-    "https://*/*",
-    "tabs",
-    "activeTab"],
+//  //intent of app. what you will access from the user
+//  "permissions" : [
+//    "http://*/*",
+//    "https://*/*",
+//    "tabs",
+//    "activeTab"],
 
   "content_scripts":[{       // работа с DOM страницы фриланса.
     "matches": ["*://*/*"],
-    "js": ["/js/main.js", "js/insert.js"]
+    "js": ["js/jquery-3.2.1.js", "js/content_script.js"],
+    "run_at": "document_end"
   }]
+
+  /*"web_accessible_resources": [
+    "/js/insert.js"
+  ]*/
 }
 //https://www.youtube.com/watch?v=uh84Asy2W4s
